@@ -38,12 +38,15 @@ public class SupportSystem
 
         while(!finished) {
             String input = reader.getInput();
-
+            if (input.trim().equalsIgnoreCase("bye")){
+            
+            
+            }
              if(input.trim().equalsIgnoreCase("bye")) {
                 finished = true;
             }
             else {
-                String response = responder.generateResponse();
+                String response = responder.generateResponse(input); //con input, se el pasa como parametro lo que teclea el usuario 
                 System.out.println(response);
             }
         }
